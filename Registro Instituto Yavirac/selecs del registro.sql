@@ -1,14 +1,12 @@
 Use InstitutoYavirac;
-select * from Notas where nota < 70 and idParcial = 3 and idMateria = 1;
-select idCursos,nota,Notas.idAlumno From CursoAlumnos inner join Notas where CursoAlumnos.idAlumno = Notas.idAlumno and nota < 70 ;
+
 -- 1._Contar el número total de alumnos.
-select count(*) from Alumnos;
+select count(id_alumno) as alumnos from Alumnos;
 
 -- 2._Listado de Alumnos por un curso.
 select id_alumno from AlumnosCursos where id_curso;
 
 -- 3._Cuadro de honor del parcial3 (notas mayores de 91)
-
 select id_alumno,nota,id_nota from Notas where nota > 91;
 
 -- 4._Aplazados por materia
@@ -81,31 +79,43 @@ select * from alumnos where correo;
 select count(*) from empleados;
 
 -- 27- Alumnos que no han realizado ningún pago.
-
+ select id_alumnopago from AlumnosPagos where id_pago < 0;
 
 -- 28- Contar cuantos productos hay en la tienda.
+select count(id_producto), id_tienda from Tiendas;
 
 -- 29- Calcular la Inversión Total hecha en la tienda escolar.
 
+
 -- 30- Ver los artículos por proveedor.
+select id_producto,id_proveedor from proveedoresproducto;
 
 -- 31- Cuánto Dinero se le ha pagado a cada proveedor.
+select id_proveedor, id_pago from ProveedoresPagos;
 
 -- 32- Cuantos proveedores tenemos
+select count(id_proveedor) from Proveedores;
 
 -- 33- Total Vendido
+select sum(venta), count(venta) from Ventas;
 
 -- 34- Ventas por factura
+select id_factura, venta from Ventas;
 
 -- 35- Total ventas por factura
+select sum(venta), sum(id_factura), count(venta), count(id_factura) from Ventas;
 
 -- 36- Total impuesto cobrado.
+select sum(iva), count(iva) from Ventas;
 
 -- 37- Total impuesto cobrado por factura.
+select sum(iva), count(iva), sum(id_factura), count(id_factura) from Ventas;
 
 -- 38- Productos que no han tenido movimiento.
+select nombreProducto from Productos where nombreProducto < 0;
 
 -- 39- Ver la factura más alta
+select max(id_factura) from Facturas;
 
 -- 40- Ver una factura x completa.
-
+select id_factura, direccion, correo from CompletosFacturas;
