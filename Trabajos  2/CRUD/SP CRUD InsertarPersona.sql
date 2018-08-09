@@ -1,4 +1,4 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insertarP`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertarPersona`(
 IN PrimerNombre VARCHAR(50),
 IN SegundoNombre VARCHAR(50),
 IN PrimerApellido VARCHAR(50),

@@ -1,5 +1,7 @@
 Drop database HojaVida;
 
+drop table Persona;
+
 Create database HojaVida;
 
 Use HojaVida;
@@ -7,7 +9,8 @@ Use HojaVida;
 Create table Persona(
 id int not null auto_increment,
 primary key (id),
-primerNombre varchar (50) not null,
+primerNombre
+ varchar (50) not null,
 segundoNombre varchar (50) not null,
 primerApellido varchar (50) not null,
 segundoApellido varchar (50) not null,
@@ -74,3 +77,4 @@ primary key (id),
 contactoPrimero varchar (200) not null,
 contactoSegundo varchar (200) not null
 );
+
