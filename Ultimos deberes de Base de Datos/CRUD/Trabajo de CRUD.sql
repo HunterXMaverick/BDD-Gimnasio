@@ -78,3 +78,79 @@ contactoPrimero varchar (200) not null,
 contactoSegundo varchar (200) not null
 );
 
+Drop database HojaVida;
+
+drop table Personas;
+
+Create database HojaVida;
+
+Use HojaVida;
+
+Create table Personas(
+id int not null auto_increment,
+primary key (id),
+primerNombre varchar (50) not null,
+segundoNombre varchar (50) not null,
+primerApellido varchar (50) not null,
+segundoApellido varchar (50) not null,
+fechaNacimiento varchar (50) not null
+);
+
+Create table TipoSangre(
+id int not null auto_increment,
+primary key (id),
+tipoSangre varchar(50) not null
+);
+
+Create table Idiomas(
+id int not null auto_increment,
+primary key (id),
+idioma varchar (300) not null
+);
+
+Create table EstadoCivil(
+id int not null auto_increment,
+primary key (id),
+descripcionEstado varchar(100) not null
+);
+
+
+Create table Genero(
+id int not null auto_increment,
+primary key (id),
+genero varchar (15) not null
+);
+
+Create table ExperienciaLaboral(
+id int not null auto_increment,
+primary key (id),
+trabajoRealizado varchar (2000) not null
+);
+
+
+Create table Ednia(
+id int not null auto_increment,
+primary key (id),
+ednia varchar (300) not null
+);
+
+Create table Enfermedades(
+id int not null auto_increment,
+primary key (id),
+tipoEnfermedad varchar(2000) not null
+);
+
+Create table Hobbeis(
+id int not null auto_increment,
+primary key (id),
+tipoHobbie varchar (2000) not null
+);
+
+Create table ContactoEmergencia(
+id int not null auto_increment,
+primary key (id),
+contactoPrimero varchar (200) not null,
+numeroPrimero int null,
+contactoSegundo varchar (200) not null,
+numeroSegundo int null
+);
