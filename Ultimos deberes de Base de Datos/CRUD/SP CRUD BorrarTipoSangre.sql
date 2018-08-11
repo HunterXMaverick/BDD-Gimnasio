@@ -1,9 +1,10 @@
 CREATE DEFINER=`root`@`localhost` PROCEDURE `BorrarTipoSangre`(
-in TipoSangre varchar(50)
+parId INT
 )
 BEGIN
 
-delete from TipoSangre where id<=10;
+delete from TipoSangre where id = parId;
+select*from tiposangre;
 
 
 END

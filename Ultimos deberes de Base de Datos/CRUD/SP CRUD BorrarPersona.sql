@@ -1,9 +1,10 @@
 CREATE DEFINER=`root`@`localhost` PROCEDURE `BorrarPersona`(
-IN PrimerNombre VARCHAR(50)
+parId INT
 )
 BEGIN
 
-delete from Persona where id<=10;
+delete from Personas where id = parId;
+select*from personas;
 
 
 END
