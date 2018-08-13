@@ -5,7 +5,7 @@ use MiCursor;
 
 CREATE TABLE Mascotas ( 
     Mascotas_id Bigint not null auto_increment, 
-    Nombre VARCHAR(120) NOT NULL,
+    Nombre VARCHAR(20) NOT NULL,
     Raza VARCHAR(20) not null,
     PRIMARY KEY (Mascotas_id)
 );
@@ -19,7 +19,7 @@ DELIMITER $$
 CREATE PROCEDURE cursorPrototip (
 ) BEGIN
 
-  DECLARE v_nnombre varchar(120);
+  DECLARE v_nnombre varchar(20);
   DECLARE v_raza varchar(20);
 
   DECLARE fin INTEGER DEFAULT 0;
